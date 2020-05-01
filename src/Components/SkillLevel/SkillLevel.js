@@ -1,24 +1,53 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {difficulty} from '../../ducks/difficultyReducer'
+import axios from 'axios'
 
-const SkillLevel = () => {
+const SkillLevel = (props) => {
+    const [difficulty, setDifficulty] = useState('')
+
+    const userDifficulty = () => {
+        const query = {
+            difficulty: difficulty
+        }
+        axios.get(`/api/runs?difficulty=${query}`).then(res => {
+            props.difficulty(res.data)
+            props.history.push('/lifts')
+        })
+    }
+
+
     return( 
         <div>
             SkillLevel.js
-            <Link to='/lifts' >
-                <button>green</button>
-            </Link>
-            <Link to='/lifts'>
-                <button>blue</button>
-            </Link>
-            <Link to='/lifts'>
-                <button>black</button>
-            </Link>
-            <Link to='/lifts'>
-                <button>double black</button>
-            </Link>
+            
+                <button onClick={() => {
+                    setDifficulty('green')
+                    userDifficulty()
+                } }  >green</button>
+           
+                <button onClick={() => {
+                    setDifficulty('blue')
+                    userDifficulty()
+                } }  >blue</button>
+           
+                <button onClick={() => {
+                    setDifficulty('black')
+                    userDifficulty()
+                } }  >black</button>
+           
+                <button onClick={() => {
+                    setDifficulty('doubleblack')
+                    userDifficulty()
+                } }  >doubleblack</button>
+           
+            
+           
         </div>
         )
 }
 
-export default SkillLevel
+const mapStateToProps = state => state
+
+export default connect(mapStateToProps, {difficulty})(SkillLevel)
