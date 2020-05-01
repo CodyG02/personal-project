@@ -3,7 +3,10 @@ import React from 'react'
 const AuthHeader = () => {
     return( 
         <div>
-            AuthHeader.js
+            <h1>
+                welcome to my snowboard app
+                
+            </h1>
         </div>
         )
 }

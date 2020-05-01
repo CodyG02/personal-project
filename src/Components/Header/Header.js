@@ -1,10 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 
-const Header = () => {
+const Header = (props) => {
+    console.log(props)
     return( 
         <div>
-            Header.js
+            <h1>
+                {props.user.username}
+            </h1>
             <Link to='/profile'>
                 <button>profile</button>
             </Link>
@@ -18,4 +22,8 @@ const Header = () => {
         )
 }
 
-export default Header
+const mapStateToProps = state => {
+    return state.user
+}
+
+export default connect(mapStateToProps)(Header)

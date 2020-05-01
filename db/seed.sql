@@ -17,11 +17,11 @@ difficulty varchar(50)
 lift_id int references lifts(id)
   );
 
-create table lift_run_join (
-  lift_run_join_id int primary key,
-  lift_id int references lifts(id),
-  run_id int references runs(id)
-  );
+-- create table lift_run_join (
+--   lift_run_join_id int primary key,
+--   lift_id int references lifts(id),
+--   run_id int references runs(id)
+--   );
   
   
   

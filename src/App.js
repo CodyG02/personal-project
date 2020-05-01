@@ -3,11 +3,15 @@ import './App.css';
 import AuthHeader from './Components/AuthHeader/AuthHeader';
 import Header from './Components/Header/Header'
 import routes from './routes'
+import {connect} from 'react-redux'
 
-function App() {
+
+
+function App(props) {
+  console.log(props.user.isLoggedIn)
   return (
     <div>
-      App.js
+      {props.user.isLoggedIn === true ? <Header/> : <AuthHeader/>}
       <Header/>
       <AuthHeader/>
       {routes}
@@ -15,4 +19,6 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = state => state
+ 
+export default connect(mapStateToProps)(App)
