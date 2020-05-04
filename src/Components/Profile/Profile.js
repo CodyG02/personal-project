@@ -22,7 +22,7 @@ const Profile = (props) => {
             setUserRuns(res.data)
             
             // console.log('delete',res.data)
-        })
+        }).catch(err => console.log(err))
     }
 
     const handleEdit = (user_run_join_id) => {
@@ -34,7 +34,7 @@ const Profile = (props) => {
             console.log(res.data)
             setUserComment(res.data)
             // console.log(res.data)
-        })
+        }).catch(err => console.log(err))
     }
 
     const mappedRuns = userRuns.map((userRun) => {
