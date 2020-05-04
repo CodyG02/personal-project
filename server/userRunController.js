@@ -1,9 +1,9 @@
 module.exports ={
     savedRuns: async (req, res) => {
+        console.log('timing issue',req.session)
         const db = req.app.get('db')
-        const {user_id} = req.params
-        const userRuns = await db.get_user_runs([user_id])
-
+        const {id} = req.session.user
+        const userRuns = await db.get_user_runs([id])
         res.status(200).send(userRuns)
     },
 
@@ -25,10 +25,11 @@ module.exports ={
 
     editRun: async (req, res) => {
         const db = req.app.get('db')
-        const {id} = req.params
+        const {user_run_join_id} = req.params
         const {comment} = req.body
+        console.log(user_run_join_id, comment)
 
-        await db.edit_run([id, comment])
+        await db.edit_run([user_run_join_id, comment])
 
         const userRuns = await db.get_user_runs()
 
