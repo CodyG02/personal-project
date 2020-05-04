@@ -1,7 +1,8 @@
 module.exports ={
     savedRuns: async (req, res) => {
         const db = req.app.get('db')
-        const userRuns = await db.get_user_runs()
+        const {user_id} = req.params
+        const userRuns = await db.get_user_runs([user_id])
 
         res.status(200).send(userRuns)
     },
@@ -36,9 +37,9 @@ module.exports ={
 
     deleteRun: async (req, res) => {
         const db = req.app.get('db')
-        const {id} = req.params
+        const {user_run_join_id} = req.params
 
-        await db.delete_run([id])
+        await db.delete_run([user_run_join_id])
 
         const userRuns = await db.get_user_runs()
 

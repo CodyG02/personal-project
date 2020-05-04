@@ -28,6 +28,6 @@ export default function(state = initialState, action){
         case LOGOUT_USER:
             return {...state, ...action.payload}
         default:
-            return initialState
+            return state
     }
 }

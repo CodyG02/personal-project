@@ -24,10 +24,10 @@ app.post('/api/auth/login', authCtrl.login)
 app.delete('/api/auth/logout', authCtrl.logout)
 app.get('/api/auth/user', authCtrl.userSession)
 
-app.get('/api/user/runs', userRunCtrl.savedRuns)
+app.get('/api/user/runs/:user_id', userRunCtrl.savedRuns)
 app.post('/api/user/runs/:run_id', userRunCtrl.addRun)
 app.put('/api/user/runs/:id',  userRunCtrl.editRun)
-app.delete('/api/user/runs/:id', userRunCtrl.deleteRun)
+app.delete('/api/user/runs/:user_run_join_id', userRunCtrl.deleteRun)
 
 app.get('/api/runs', runCtrl.getRuns)
 

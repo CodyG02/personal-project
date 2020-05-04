@@ -1,28 +1,40 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
-const Profile = () => {
+const Profile = (props) => {
     const [userRuns, setUserRuns] = useState([])
-    
+    // const [userComment, setUserComment] = useState('')
 
-    useEffect(() => {
-        axios.get(`/api/user/runs`).then(res => {
-            console.log('does this hit',res.data)
+    useEffect((user_id) => {
+        // console.log(userRuns)
+        axios.get(`/api/user/runs/${user_id}`).then(res => {
+            // console.log('does this hit',res.data)
             setUserRuns(res.data)
+            // console.log(res.data)
             
         })
     }, [])
 
-    const handleDelete = (id) => {
-        axios.delete(`/api/user/runs/${id}`).then(res => {
-            console.log('delete',res.data)
+    const handleDelete = (user_run_join_id) => {
+        axios.delete(`/api/user/runs/${user_run_join_id}`).then(res => {
+            // console.log('hit',res.data)
             setUserRuns(res.data)
             
-            console.log('delete',res.data)
+            // console.log('delete',res.data)
         })
     }
 
+    // const handleEdit = (user_run_join_id, ) => {
+    //     let body ={
+    //         comment:''
+    //     }
+    //     axios.post(`/api/user/runs/${user_run_join_id}`, body).then(res => {
+    //         setUserComment(res.data)
+    //     })
+    // }
+
     const mappedRuns = userRuns.map((userRun) => {
+        console.log(userRun)
         return (
         <div>
             
@@ -31,7 +43,7 @@ const Profile = () => {
             {userRun.difficulty}
             {userRun.comment}
             <button>edit</button>
-            <button onClick={() => handleDelete(userRun.id)}>delete</button>
+            <button onClick={() => handleDelete(userRun.user_run_join_id)}>delete</button>
         </div>
         )
     })

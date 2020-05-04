@@ -1,25 +1,42 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React, {useState} from 'react'
+import {connect} from 'react-redux'
+import {liftName} from '../../ducks/liftsReducer'
 
-const Lifts = () => {
+const Lifts = (props) => {
+    const [lift, setLift] = useState('') 
+
+    const userLift = (lift) => {
+        setLift(lift)
+        props.liftName(lift)
+        props.history.push('/runs')
+    }
+
     return( 
     <div>
         Lifts.js
 
-    <Link to='/runs' >
-        <button>lift1</button>
-    </Link>
-    <Link to='/runs' >
-        <button>lift2</button>
-    </Link>
-    <Link to='/runs' >
-        <button>lift3</button>
-    </Link>
-    <Link to='/runs' >
-        <button>lift4</button>
-    </Link>
+    
+        <button onClick={() => {
+            userLift('lift1')}}  >lift1</button>
+    
+    
+        <button onClick={() => {
+            userLift('lift2')}}  >lift2</button>
+    
+    
+        <button onClick={() => {
+            userLift('lift3')}}  >lift3</button>
+    
+    
+        <button onClick={() => {
+            userLift('lift4')}}  >lift4</button>
+    
     </div>
     )
 }
 
-export default Lifts
+const mapStateToProps = state => {
+    return state.lift
+}
+
+export default connect(mapStateToProps, {liftName})(Lifts)
