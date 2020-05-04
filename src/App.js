@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom'
 
 
 function App(props) {
-  console.log(props.user.isLoggedIn)
+  // console.log(props.user.isLoggedIn)
   return (
     <div>
       {props.user.isLoggedIn === true ? <Header/> : <AuthHeader/>}

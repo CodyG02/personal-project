@@ -6,15 +6,11 @@ import axios from 'axios'
 
 const SkillLevel = (props) => {
     const [difficulty, setDifficulty] = useState('')
-
-    const userDifficulty = () => {
-        const query = {
-            difficulty: difficulty
-        }
-        axios.get(`/api/runs?difficulty=${query}`).then(res => {
-            props.difficulty(res.data)
-            props.history.push('/lifts')
-        })
+    console.log(difficulty)
+    
+    const  userDifficulty = () => {
+        props.difficulty(difficulty)
+        // props.history.push('/lifts')
     }
 
 
@@ -48,6 +44,8 @@ const SkillLevel = (props) => {
         )
 }
 
-const mapStateToProps = state => state
+const mapStateToProps = state => {
+    return state.difficulty
+}
 
 export default connect(mapStateToProps, {difficulty})(SkillLevel)
