@@ -6,7 +6,8 @@ import {connect} from 'react-redux'
 
 const Runs = (props) => {
     const [filteredRuns, setFilteredRuns] = useState([])
-    
+    const [userComment, setUserComment] = useState('')
+    const [isSaving, setIsSaving] = useState(false)
 
 useEffect(() => {
     // console.log(props)
@@ -19,13 +20,33 @@ useEffect(() => {
         console.log(res.data)
     })
 }, [])
+
+const handleSave = (id) =>{
+    let body ={
+        comment: userComment
+    }
+    axios.post(`/api/user/runs/${id}`, body).then(res => {
+        console.log('succeeded')
+        setIsSaving(false)
+    }).catch(() => alert('Something went wrong'))
+}
     
     const mappedRuns = filteredRuns.map((selectedRuns) => {
         return (
             <div>
                 {selectedRuns.name}
                 {selectedRuns.difficulty}
-                <button>save</button>
+                {isSaving ? 
+                <div>
+                    <input placeholder='add comment' onChange={e => setUserComment(e.target.value)}/>
+                    <button onClick={() => setIsSaving(false)} >cancel</button>
+                    <button onClick={() => handleSave(selectedRuns.id)} >save</button>
+                </div> 
+                :
+                <div>
+                    <button onClick={() => setIsSaving(true)}>save</button>
+                </div>
+                }
                 
             </div>
         )

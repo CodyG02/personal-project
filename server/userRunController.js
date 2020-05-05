@@ -17,9 +17,9 @@ module.exports ={
         // console.log(run_id, id, comment)
         // console.log(req.session)
 
-        const userRuns = await db.get_user_runs([id])
+        // const userRuns = await db.get_user_runs([id])
         
-        res.status(200).send(userRuns)
+        res.sendStatus(200)
         
     },
 
