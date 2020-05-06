@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {logoutUser} from '../../ducks/userReducer'
@@ -7,6 +7,7 @@ import {withRouter} from 'react-router-dom'
 
 const Header = (props) => {
     // console.log(props)
+    
 
 const logout = () => {
     axios.delete('/api/auth/logout').then(() => {
