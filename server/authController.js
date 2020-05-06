@@ -1,4 +1,15 @@
 const bcrypt = require('bcryptjs')
+const nodemailer = require('nodemailer')
+const creds = require('./emailConfig')
+
+let transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    auth: {
+        user: creds.USER,
+        pass: creds.PASS
+    }
+
+})
 
 module.exports = {
     login: async (req, res) => {
@@ -39,6 +50,13 @@ module.exports = {
         const [newUser] = await db.register_user([email, username, hash])
 
         req.session.user = newUser
+
+        let mail = await transporter.sendMail({
+            from: 'SaltCityShredders@gmail.com',
+            to: `${newUser.email}`,
+            subject: 'Welcome New User',
+            text: 'Thank you for registering with our website, we hope your day of riding is incredible. Our goal with this website is to try and make deciding where you can go based on riding level more streamlined.'
+        })
 
         res.status(200).send(req.session.user)
     },
