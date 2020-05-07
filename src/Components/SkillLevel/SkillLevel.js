@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {connect} from 'react-redux'
 import {userDifficulty} from '../../ducks/difficultyReducer'
+import './SkillLevel.css'
 
 
 const SkillLevel = (props) => {
@@ -17,24 +18,24 @@ const SkillLevel = (props) => {
 
 
     return( 
-        <div>
-            SkillLevel.js
+        <div className='skill-main'>
             
-                <button onClick={() => {
+            
+                <button className='green-button' onClick={() => {
                     userDifficulty('green')
-                } }  >green</button>
+                } }  ><img className='green' src='https://i.etsystatic.com/8837396/r/il/c28ea6/720369752/il_1140xN.720369752_pdxb.jpg'/> </button>
            
-                <button onClick={() => {
+                <button className='blue-button' onClick={() => {
                     userDifficulty('blue')
-                } }  >blue</button>
+                } }  ><img className='blue' src='https://i.etsystatic.com/8837396/r/il/9d5a50/720497439/il_1140xN.720497439_tat6.jpg'/> </button>
            
-                <button onClick={() => {
+                <button className='black-button' onClick={() => {
                     userDifficulty('black')
-                } }  >black</button>
+                } }  ><img className='black' src='https://i.etsystatic.com/8837396/r/il/0552ce/720497527/il_1140xN.720497527_al9k.jpg'/> </button>
            
-                <button onClick={() => {
+                <button className='dblack-button' onClick={() => {
                     userDifficulty('doubleblack')
-                } }  >doubleblack</button>
+                } }  ><img className='dblack' src='https://i.etsystatic.com/8837396/r/il/5320fd/720497619/il_1140xN.720497619_mnpz.jpg'/> </button>
            
             
            

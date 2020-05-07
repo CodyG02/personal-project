@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react'
 import {connect} from 'react-redux'
 import {logoutUser} from '../../ducks/userReducer'
 import axios from 'axios'
@@ -9,6 +8,13 @@ import './Header.css'
 const Header = (props) => {
     // console.log(props)
     
+const handleDifficulty = () => {
+    props.history.push('/skilllevel')
+}
+
+const handleProfile = () => {
+    props.history.push('/profile')
+}
 
 const logout = () => {
     axios.delete('/api/auth/logout').then(() => {
@@ -22,13 +28,9 @@ const logout = () => {
             <h1 className='user-name'>
                 {props.user.username}
             <div className='header-buttons'>
-                <Link  className='header-buttons' to='/profile'>
-                    <button className='profile-button'>profile</button>
-                </Link>
-                <Link  className='header-buttons' to='/skilllevel'>
-                    <button className='difficulty-button'>difficulty</button>
-                </Link>
-                <button className='logout-button' onClick={() => logout()} >logout</button>
+                <button className='head-buttons' onClick={() => handleProfile()} >profile</button>
+                <button className='head-buttons' onClick={() => handleDifficulty()}>difficulty</button>
+                <button className='head-buttons' onClick={() => logout()} >logout</button>
             </div>
             </h1>
         </div>

@@ -22,9 +22,9 @@ function App(props) {
   return (
     <div classname='App'>
       {props.user.isLoggedIn === true ? <Header/> : <AuthHeader/>}
-      <Link to='/'>
+      {/* <Link to='/'>
                 <button>home</button>
-            </Link>
+            </Link> */}
       {routes}
     </div>
   );

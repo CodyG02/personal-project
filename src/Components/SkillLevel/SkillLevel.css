@@ -1,0 +1,67 @@
+.skill-main{
+    background-color: rgba(165, 211, 230, 0.712);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.green-button{
+    height: 20vh;
+    width: 80vw;
+    border-radius: 15px;
+    background-color: rgb(2,94,47);
+    box-shadow: 8px 10px 15px black;
+}
+
+.green {
+    
+    height: 100%;
+    box-shadow: 5px 5px 15px white;
+}
+
+.blue-button{
+    height: 20vh;
+    width: 80vw;
+    border-radius: 15px;
+    background-color: rgb(1,70,139)
+    ;
+    box-shadow: 8px 10px 15px black;
+}
+
+.blue {
+ height: 100%;
+ /* box-shadow: 5px 5px 15px black; */
+ box-shadow: 5px 5px 15px white;
+}
+
+.black-button{
+    height: 20vh;
+    width: 80vw;
+    border-radius: 15px;
+    background-color: black;
+    box-shadow: 8px 10px 15px black;
+}
+
+.black {
+    height: 100%;
+    box-shadow: 5px 5px 15px grey;
+}
+
+.dblack-button{
+    height: 20vh;
+    width: 80vw;
+    border-radius: 15px;
+    background-color: black;
+    box-shadow: 8px 10px 15px black;
+}
+
+.dblack {
+    height: 100%;
+    box-shadow: 5px 5px 15px grey;
+}
+

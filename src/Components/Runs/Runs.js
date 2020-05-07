@@ -3,6 +3,7 @@ import axios from 'axios'
 import {liftName} from '../../ducks/liftsReducer'
 import {userDifficulty} from '../../ducks/difficultyReducer'
 import {connect} from 'react-redux'
+import './Runs.css'
 
 const Runs = (props) => {
     const [filteredRuns, setFilteredRuns] = useState([])
@@ -52,9 +53,10 @@ const handleSave = (id) =>{
         )
     })
     return( 
-        <div>
-            Runs.js
-            {mappedRuns}
+        <div className='runs-main' >
+            <div className='runs' >
+                {mappedRuns}
+            </div>
         </div>
         )
 }
