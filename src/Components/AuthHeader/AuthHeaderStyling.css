@@ -1,0 +1,22 @@
+
+
+.auth-header {
+    background-color: rgb(90, 152, 163);
+    width: 100vw;
+    height: 15vh;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+}
+
+.display {
+color: rgb(32, 31, 31);
+text-shadow: 5px 5px 15px ivory;
+font-weight: 700;
+font-size: 40px;
+
+}

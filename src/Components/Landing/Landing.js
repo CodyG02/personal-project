@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import {loginUser} from '../../ducks/userReducer'
+import  './Landing.css'
 
 const Landing = (props) => {
     const [email, setEmail] = useState('')
@@ -19,17 +20,21 @@ const Landing = (props) => {
         }).catch(err => alert('failed to log in'))
     }
     return( 
-        <div>
-            <input placeholder='email' onChange={e => setEmail(e.target.value)} />
-            <br/>
-            <input placeholder='password' onChange={e => setPassword(e.target.value)} />
-            <br/>
-            <button onClick={() => handleLogin()}>login</button>
-            <br/>
+        <div className='main'>
+            {/* <image className='test' url=''/> */}
+            <div className='information'>
+                <input className='input' placeholder='email' onChange={e => setEmail(e.target.value)} />
+                <br/>
+                <input className='input' placeholder='password' onChange={e => setPassword(e.target.value)} />
+                <br/>
+                <button className='button' onClick={() => handleLogin()} >login</button>
+                <br/>
                 <Link to='/register'>
-                    <button>register</button>
+                    <button className='button'>register</button>
                 </Link>
+            </div>
         </div>
+
         )
 }
 

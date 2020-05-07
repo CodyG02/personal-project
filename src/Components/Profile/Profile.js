@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+// import Chart from '../Chart/Chart'
+// import {Bar, } from 'react-chartjs-2'
 
 const Profile = (props) => {
     const [userRuns, setUserRuns] = useState([])
@@ -7,9 +9,9 @@ const Profile = (props) => {
     const [isEditing, setIsEditing] = useState(false)
 
     useEffect(() => {
-        console.log(userRuns)
+        // console.log(userRuns)
         axios.get(`/api/user/runs`).then(res => {
-            console.log('does this hit',res.data)
+            // console.log('does this hit',res.data)
             setUserRuns(res.data)
             // console.log(res.data)
             
@@ -31,7 +33,7 @@ const Profile = (props) => {
         }
         // console.log(userComment)
         axios.put(`/api/user/runs/${user_run_join_id}`, body).then(res => {
-            console.log(res.data)
+            // console.log(res.data)
             setUserComment(res.data)
             // console.log(res.data)
         }).catch(err => console.log(err))
@@ -65,6 +67,12 @@ const Profile = (props) => {
     // {console.log(userRuns[0].name)}
     return( 
         <div>
+            {/* <Chart/> */}
+            {/* <Bar
+                data={}
+                width={500}
+                height={250}
+                options={{ maintainAspectRatio: false }}/> */}
             Profile.js
             <br/>
             

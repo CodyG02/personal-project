@@ -1,10 +1,11 @@
 import React from 'react'
+import AuthHeaderStyling from './AuthHeaderStyling.css'
 
 const AuthHeader = () => {
     return( 
-        <div>
-            <h1>
-                welcome to my snowboard app
+        <div className='auth-header'>
+            <h1 className='display'>
+                Salt City Shredders
                 
             </h1>
         </div>

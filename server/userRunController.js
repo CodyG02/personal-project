@@ -35,7 +35,7 @@ module.exports ={
         const userRuns = await db.get_user_runs([id])
 
         res.status(200).send(userRuns)
-        console.log(userRuns)
+        // console.log(userRuns)
     },
 
     deleteRun: async (req, res) => {
