@@ -18,19 +18,19 @@ const Lifts = (props) => {
 
     
         <button className='great-western-button' onClick={() => {
-            userLift('lift1')}}  ><img className='great-western' src='https://lh3.googleusercontent.com/proxy/HA3tkqZ4UmYaRd7wyJtmimTN9XlEdUJDExFx3wIByTLZRkoNN474j_eKUjZ5mbsHVkmIzrJ0z9eJJwYJl6AaSnhD7B9laYRq'/>GREAT WESTERN EXPRESS</button>
+            userLift('Great Western Express')}}  ><img className='great-western' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSsrsCXVrEquZhS14l1PS5hpY1qykM8zk_EeinmCVfdlzGV0Da-&usqp=CAU'/>GREAT WESTERN EXPRESS</button>
     
     
         <button className='snake-creek-button' onClick={() => {
-            userLift('lift2')}}  ><img className='snake-creek' src='https://lh3.googleusercontent.com/proxy/g10Lt4ouDyCchPaCXpKLVPQvb3o7xt8U-m94bYNyNH7aunlKmEU7uGdPtwTQKGgx-v3eEwSyjyQT1E5DsOq66HOi-d-PoVZhTLjhDDDWmwvBzBoN7YHGG3Uahc4kjuaImEiUe8x20h73UJ8-HefeXBA'/>SNAKE CREEK EXPRESS</button>
+            userLift('Snake Creek Express')}}  ><img className='snake-creek' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTu1SGduswpNoMfP_VO_LYgyHXYdLMSwMQftBKzHprqv0FRdCZb&usqp=CAU'/>SNAKE CREEK EXPRESS</button>
     
     
         <button className='crest-express-button' onClick={() => {
-            userLift('lift3')}}  ><img className='crest-express' src='https://lh3.googleusercontent.com/proxy/s30QP39XyY9_KKSELm2rOKbFblUNUnNR9wjmTXtJSxv0DKIZzAoFiQ92QyG4CdITYnjAPxpuU-axiHLc2ghe3xGw8EWnUT_ZS4vBZEVrp8xDoJ9h8aJ0zAyjo1pUcWnE2Eo0rciXpAgQ0w'/>CREST EXPRESS</button>
+            userLift('Crest Express')}}  ><img className='crest-express' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTgOuww_O0HycDz8dz6QATv_Qgi5ohBw3fqwVLfkK2COfiVC8oz&usqp=CAU'/>CREST EXPRESS</button>
     
     
         <button className='milly-button' onClick={() => {
-            userLift('lift4')}}  ><img className='milly' src='https://img.geocaching.com/waymarking/display/277753d9-8933-41d7-9619-b3f59c3c50e2.JPG'/>MILLY EXPRESS</button>
+            userLift('Milly Express')}}  ><img className='milly' src='https://img.geocaching.com/waymarking/display/277753d9-8933-41d7-9619-b3f59c3c50e2.JPG'/>MILLY EXPRESS</button>
     
     </div>
     )

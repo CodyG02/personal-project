@@ -20,7 +20,7 @@ function App(props) {
     })
 }, [])
   return (
-    <div classname='App'>
+    <div >
       {props.user.isLoggedIn === true ? <Header/> : <AuthHeader/>}
       {/* <Link to='/'>
                 <button>home</button>
