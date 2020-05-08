@@ -35,17 +35,28 @@ const handleSave = (id) =>{
     const mappedRuns = filteredRuns.map((selectedRuns) => {
         return (
             <div>
-                {selectedRuns.name}
-                {selectedRuns.difficulty}
+                
+                <div className='run-text'>
+                        {selectedRuns.name}
+                        <br/>
+                        {selectedRuns.difficulty}
+                 </div>
+    
                 {isSaving ? 
                 <div>
-                    <input placeholder='add comment' onChange={e => setUserComment(e.target.value)}/>
-                    <button onClick={() => setIsSaving(false)} >cancel</button>
-                    <button onClick={() => handleSave(selectedRuns.id)} >save</button>
+                     <textarea 
+                     className='runs-comment'
+                     cols="40" 
+                     rows="10" 
+                     placeholder={`${selectedRuns.name}`}
+                     onChange={e => setUserComment(e.target.value)}></textarea>
+                     <br/>
+                    <button className='toggled-button' onClick={() => setIsSaving(false)} >Cancel</button>
+                    <button className='toggled-button-2' onClick={() => handleSave(selectedRuns.id)} >Save</button>
                 </div> 
                 :
                 <div>
-                    <button onClick={() => setIsSaving(true)}>save</button>
+                    <button className='initial-save' onClick={() => setIsSaving(true)}>Save</button>
                 </div>
                 }
                 
