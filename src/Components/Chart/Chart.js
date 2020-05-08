@@ -3,31 +3,21 @@
 // import axios from 'axios'
 
 // const Chart = (props) => {
-//     const [runDifficulty, setRunDifficulty] = useState([])
+//     const [difficulty, setDifficulty] = useState([])
+
+//     const userProgress = () => {
+//         axios.get(`/api/user/runs`).then(res => {
+//             console.log(res.data)
+//         })
+//     }
 
 //     useEffect(() => {
-//         axios.get('/api/user/runs').then(res => {
-//             setRunDifficulty(res.data)
-//             console.log(res.data.difficulty)
-//         })
-//     }, [])
+//         userProgress()
+//     },[])
 
-//     const mappedDifficulty = runDifficulty.forEach((runD) => {
-//         return(
-//             <div>
-//                 <Bar
-//                 data={}
-//                 width={500}
-//                 height={250}
-//                 options={{ maintainAspectRatio: false }}/>
-
-//             </div>
-//         )
-//     })
 //     return (
-//         <div>
-            
-//             {mappedDifficulty}
+//         <div> 
+
 //         </div>
 //     )
 // }

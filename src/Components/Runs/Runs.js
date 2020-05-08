@@ -43,7 +43,7 @@ const handleSave = (id) =>{
                  </div>
     
                 {isSaving ? 
-                <div>
+                <div className='parent'>
                      <textarea 
                      className='runs-comment'
                      cols="40" 
