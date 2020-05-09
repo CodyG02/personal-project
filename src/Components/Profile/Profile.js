@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import {Bar} from 'react-chartjs-2'
 import YourRuns from '../YourRuns/YourRuns'
+import './Profile.css'
+
 
 const Profile = (props) => {
     const [userRuns, setUserRuns] = useState([])
@@ -86,16 +88,18 @@ const Profile = (props) => {
     })
 
     return( 
-        <div>
-            <Bar data={chartData}
-            options={{
+        <div className='profile-main'>
+            <div className='bar-graph' >
+                <Bar  data={chartData}
+                options={{
                 responsive: true,
                 scales: {
-                    yAxes: [{
-                        ticks: {beginAtZero: true}
-                    }]
-                }
-            }}/>
+                yAxes: [{
+                ticks: {beginAtZero: true}
+                     }]
+                    }
+                }}/>
+            </div>
             <br/>
            {mappedRuns}
         </div>

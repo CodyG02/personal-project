@@ -1,0 +1,12 @@
+.profile-main{
+    background-image: url('https://bestanimations.com/Nature/winter/winter-snow-nature-animated-gif-13.gif');
+    background-size: cover;
+    width: 100vw;
+    height: 300vh;
+}
+
+.bar-graph{
+    background-color: silver;
+    height: 32vh;
+    /* font-weight: 900; */
+}

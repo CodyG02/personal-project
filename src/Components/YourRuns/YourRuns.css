@@ -1,0 +1,82 @@
+.flex-element{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.saved-display{
+    height: 20vh;
+    width: 80vw;
+    border-radius: 15px;
+    background-color:rgb(124,117,74);
+    box-shadow: 5px 5px 15px black;
+    margin: 5vh;
+    margin-top: 15vh;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+.user-comment{
+    font-size: 15px;
+    overflow-wrap:break-word ;
+}
+
+
+
+.editing-buttons{
+    display: flex;
+    flex-direction: column;
+    /* align-items: inherit; */
+    float: right;
+    justify-content: space-between;
+    width:20vw;
+    /* margin-top:2vh; */
+    height:14vh;
+}
+
+.cancel-profile{
+    height: 6vh;
+    background-color: rgb(169,182,194);;
+    border-radius: 15px;
+    font-size: 22px;
+    font-weight: 700;
+    box-shadow: 5px 5px 15px black;
+}
+
+.save-profile{
+    height: 6vh;
+    background-color: rgb(169,182,194);;
+    border-radius: 15px;
+    font-size: 25px;
+    font-weight: 700;
+    box-shadow: 5px 5px 15px black;
+
+}
+
+.input-profile {
+    border-radius: 15px;
+    font-weight: 700;
+    height: 14vh;
+}
+
+.edit-button{
+    background-color: rgb(169,182,194);;
+    border-radius: 15px;
+    height: 7vh;
+    width: 25vw;
+    margin-right: 3vw;
+    font-size: 30px;
+    font-weight: 700;
+    box-shadow: 5px 5px 15px black;
+}
+
+.delete-button{
+    background-color: rgb(169,182,194);;
+    border-radius: 15px;
+    height: 7vh;
+    width: 25vw;
+    margin-left: 3vw;
+    font-size: 30px;
+    font-weight: 700;
+    box-shadow: 5px 5px 15px black;
+}
