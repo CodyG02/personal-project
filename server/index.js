@@ -6,6 +6,7 @@ const authCtrl = require('./authController')
 const userRunCtrl = require('./userRunController')
 const runCtrl = require('./runController')
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env
+const path = require('path')
 
 const app = express()
 
@@ -30,6 +31,12 @@ app.put('/api/user/runs/:user_run_join_id',  userRunCtrl.editRun)
 app.delete('/api/user/runs/:user_run_join_id', userRunCtrl.deleteRun)
 
 app.get('/api/runs', runCtrl.getRuns)
+
+app.use(express.static(__dirname + '/../build'))
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build/index.html'))
+})
 
 
 massive({
