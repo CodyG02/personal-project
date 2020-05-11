@@ -2,7 +2,7 @@
     background-image: url('https://bestanimations.com/Nature/winter/winter-snow-nature-animated-gif-13.gif');
     background-size: cover;
     width: 100vw;
-    /* height: 300vh; */
+    min-height: 100vh;
 }
 
 .bar-graph{

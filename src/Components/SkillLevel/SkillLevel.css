@@ -2,13 +2,22 @@
     /* background-color: rgba(165, 211, 230, 0.712); */
     background-image: url('https://bestanimations.com/Nature/winter/winter-snow-nature-animated-gif-13.gif');
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 
+}
+
+@media (min-width: 501px ){
+ .skill-main{
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+     justify-content: space-around;
+ }
 }
 
 .green-button{
@@ -19,11 +28,20 @@
     box-shadow: 8px 10px 15px black;
 }
 
+@media (min-width: 501px){
+    .green-button{
+        height: 45vh;
+        width: 45vw;
+    }
+}
+
 .green {
     
     height: 100%;
     box-shadow: 5px 5px 15px white;
 }
+
+
 
 .blue-button{
     height: 20vh;
@@ -32,6 +50,13 @@
     background-color: rgb(1,70,139)
     ;
     box-shadow: 8px 10px 15px black;
+}
+
+@media (min-width: 501px){
+    .blue-button{
+        height: 45vh;
+        width: 45vw;
+    }
 }
 
 .blue {
@@ -48,6 +73,13 @@
     box-shadow: 8px 10px 15px black;
 }
 
+@media (min-width: 501px){
+    .black-button{
+        height: 45vh;
+        width: 45vw;
+    }
+}
+
 .black {
     height: 100%;
     box-shadow: 5px 5px 15px grey;
@@ -59,6 +91,13 @@
     border-radius: 15px;
     background-color: black;
     box-shadow: 8px 10px 15px black;
+}
+
+@media (min-width: 501px){
+    .dblack-button{
+        height: 45vh;
+        width: 45vw;
+    }
 }
 
 .dblack {

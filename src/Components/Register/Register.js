@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import {loginUser} from '../../ducks/userReducer'
+import './Register.css'
 
 const Register = (props) => {
     const [email, setEmail] = useState('')
@@ -20,15 +21,16 @@ const Register = (props) => {
         }).catch(err => alert('failed to register'))
     }
     return(
-        <div>
-           
-            <input placeholder='username' onChange={e => setUsername(e.target.value)}/>
+        <div className='register-main'>
+           <div className='register-information'>
+            <input className='register-input' placeholder='username' onChange={e => setUsername(e.target.value)}/>
             <br/>
-            <input placeholder='email' onChange={e => setEmail(e.target.value)} />
+            <input className='register-input' placeholder='email' onChange={e => setEmail(e.target.value)} />
             <br/>
-            <input placeholder='password' onChange={e => setPassword(e.target.value)} />
-            <br/>
-            <button onClick={() => handleRegister()} >sign up</button>
+            <input className='register-input' placeholder='password' onChange={e => setPassword(e.target.value)} />
+           <    br/>
+            <button className='register-button' onClick={() => handleRegister()} >Sign up</button>
+           </div>
         </div>
     )
 }

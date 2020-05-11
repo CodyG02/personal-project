@@ -1,5 +1,5 @@
 
-.main{
+.register-main{
     background-image: url('https://media.giphy.com/media/14uJKhQMZ1wLfO/giphy.gif');
     background-size: cover;
     height: 100vh;
@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.information {
+.register-information {
     background-color: rgba(128, 128, 128, 0.644);
     height: 45vh;
     width: 80vw;
@@ -21,16 +21,16 @@
     position: relative;
     border-radius: 15px;
     box-shadow: 5px 5px 15px white;
-    
-    
-}
-@media (min-width: 501px ){
-    .information{
-      width: 30vw;
-  }
+     
 }
 
-.input {
+@media (min-width: 501px ){
+ .register-information{
+     width: 30vw;
+ }
+}
+
+.register-input {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 15px black;
@@ -38,14 +38,12 @@
 }
 
 @media (min-width: 501px ){
-    .input{
-        width: 15vw;
-        
-    }
-    
+ .register-input{
+     width: 15vw;
+ }
 }
 
-.button {
+.register-button {
     height: 5vh;
     width: 25vw;
     border-radius: 25px;
@@ -54,9 +52,7 @@
 }
 
 @media (min-width: 501px ){
-  .button {
-      width: 10vw;
-  }
+ .register-button{
+     width: 10vw;
+ }
 }
-
-
