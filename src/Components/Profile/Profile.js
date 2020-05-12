@@ -89,16 +89,19 @@ const Profile = (props) => {
 
     return( 
         <div className='profile-main'>
-            <div className='bar-graph' >
-                <Bar  data={chartData}
-                options={{
-                responsive: true,
-                scales: {
-                yAxes: [{
-                ticks: {beginAtZero: true}
+            <div className='graph-parent'>
+                <div className='bar-graph' >
+                    <Bar data={chartData}
+                    options={{
+                    responsive: true,
+                    scales: {
+                    yAxes: [{
+                    ticks: {beginAtZero: true},
+                    
                      }]
                     }
-                }}/>
+                   }}/>
+                </div>
             </div>
             <br/>
            {mappedRuns}
